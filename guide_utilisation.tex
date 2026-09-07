@@ -1,0 +1,203 @@
+% =====================================================================
+%  GUIDE D'UTILISATION — LEAKO (Leaks Survey)
+%  Guide simple et pratique pour un nouvel utilisateur
+%  Compiler avec : pdflatex (ou Overleaf)
+% =====================================================================
+\documentclass[11pt,a4paper]{article}
+
+% ------------------------- PACKAGES -------------------------
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[french]{babel}
+\usepackage{graphicx}
+\usepackage{geometry}
+\usepackage{xcolor}
+\usepackage{titlesec}
+\usepackage{fancyhdr}
+\usepackage{hyperref}
+\usepackage{enumitem}
+\usepackage{booktabs}
+\usepackage{float}
+\usepackage{helvet}
+\usepackage{setspace}
+
+% ------------------------- MISE EN PAGE -------------------------
+\geometry{top=2cm, bottom=2cm, left=2.5cm, right=2.5cm}
+\renewcommand{\familydefault}{\sfdefault}
+\setstretch{1.15}
+
+% ------------------------- COULEURS OCP -------------------------
+\definecolor{ocpvert}{RGB}{0, 122, 92}
+\definecolor{ocpvertfonce}{RGB}{0, 82, 62}
+\definecolor{gris}{RGB}{90, 90, 90}
+
+% ------------------------- EN-TÊTE / PIED DE PAGE -------------------------
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{\small\textcolor{ocpvert}{\textbf{LEAKO — Guide d'utilisation}}}
+\fancyhead[R]{\small\textcolor{gris}{OCP}}
+\fancyfoot[C]{\thepage}
+\renewcommand{\headrulewidth}{0.4pt}
+\renewcommand{\headrule}{\hbox to\headwidth{\color{ocpvert}\leaders\hrule height \headrulewidth\hfill}}
+
+% ------------------------- TITRES -------------------------
+\titleformat{\section}
+  {\normalfont\Large\bfseries\color{ocpvertfonce}}
+  {\thesection}{1em}{}
+\titleformat{\subsection}
+  {\normalfont\large\bfseries\color{ocpvert}}
+  {\thesubsection}{1em}{}
+
+% ------------------------- LIENS -------------------------
+\hypersetup{
+  colorlinks=true,
+  linkcolor=ocpvertfonce,
+  urlcolor=ocpvert,
+}
+
+% ------------------------- DOCUMENT -------------------------
+\begin{document}
+
+% =====================================================================
+%  TITRE
+% =====================================================================
+\begin{center}
+{\Huge\bfseries\textcolor{ocpvertfonce}{LEAKO}}\\[0.3cm]
+{\Large\bfseries Guide d'utilisation rapide}\\[0.2cm]
+{\large Gestion et inspection des fuites de vapeur}\\[0.5cm]
+\rule{0.5\textwidth}{1pt}
+\end{center}
+
+\vspace{0.5cm}
+
+% =====================================================================
+%  1. INSTALLATION DE L'APPLICATION
+% =====================================================================
+\section{Installer l'application mobile}
+
+\begin{enumerate}[leftmargin=2em]
+    \item Ouvrez le \textbf{dashboard web} dans votre navigateur : \url{https://leako.quaisse.me}
+    \item Allez sur la page \textbf{Application mobile}.
+    \item \textbf{Scannez le QR code} avec votre téléphone pour télécharger l'application (fichier APK).
+    \item Installez l'application sur votre téléphone Android.
+\end{enumerate}
+
+\subsection{Si vous n'avez pas encore l'application}
+\begin{itemize}
+    \item Le QR code se trouve sur la page \textbf{Application mobile} du dashboard.
+    \item Scannez-le avec l'appareil photo de votre téléphone, puis téléchargez et installez l'APK.
+\end{itemize}
+
+% =====================================================================
+%  2. CRÉATION DE COMPTE
+% =====================================================================
+\section{Créer un compte}
+
+\begin{enumerate}[leftmargin=2em]
+    \item Ouvrez l'application \textbf{LEAKO} sur votre téléphone.
+    \item Sur l'écran de connexion, appuyez sur \textbf{Créer un compte}.
+    \item Renseignez vos informations : \textbf{nom, prénom, email, mot de passe}.
+    \item Validez. Vous êtes maintenant connecté.
+\end{enumerate}
+
+% =====================================================================
+%  3. CRÉATION D'UN PROJET
+% =====================================================================
+\section{Créer un projet}
+
+\begin{enumerate}[leftmargin=2em]
+    \item Connectez-vous à l'application.
+    \item Ouvrez le menu \textbf{Projets}.
+    \item Appuyez sur \textbf{Nouveau projet}.
+    \item Donnez un \textbf{nom} et une \textbf{description} au projet.
+    \item Validez. Le projet est créé.
+\end{enumerate}
+
+% =====================================================================
+%  4. INVITATION DE MEMBRES
+% =====================================================================
+\section{Inviter des membres}
+
+\begin{enumerate}[leftmargin=2em]
+    \item Ouvrez votre \textbf{projet}.
+    \item Appuyez sur \textbf{Inviter un membre}.
+    \item Saisissez l'\textbf{email} de la personne à inviter.
+    \item La personne reçoit une invitation et doit l'\textbf{accepter}.
+\end{enumerate}
+
+\subsection{Important}
+\begin{itemize}
+    \item \textbf{Seuls les membres d'un projet} peuvent voir les données (fuites, campagnes) de ce projet.
+    \item Une personne \textbf{hors projet} ne peut \textbf{pas} voir les données.
+    \item Pour accéder aux données, il faut d'abord être \textbf{invité} et \textbf{accepter} l'invitation.
+\end{itemize}
+
+% =====================================================================
+%  5. CRÉATION D'UNE CAMPAGNE
+% =====================================================================
+\section{Créer une campagne d'inspection}
+
+\begin{enumerate}[leftmargin=2em]
+    \item Ouvrez le menu \textbf{Campagnes}.
+    \item Appuyez sur \textbf{Nouvelle campagne}.
+    \item Renseignez le \textbf{nom} et la \textbf{zone} d'inspection.
+    \item Validez. La campagne est créée.
+\end{enumerate}
+
+% =====================================================================
+%  6. SIGNALEMENT D'UNE FUITE
+% =====================================================================
+\section{Signaler une fuite}
+
+\begin{enumerate}[leftmargin=2em]
+    \item Ouvrez le menu \textbf{Fuites}.
+    \item Appuyez sur \textbf{Nouvelle fuite}.
+    \item Renseignez les informations : \textbf{tag, type de vapeur, pression, diamètre}.
+    \item \textbf{Capturez la position GPS} (bouton GPS).
+    \item \textbf{Ajoutez des photos} et/ou une vidéo de la fuite.
+    \item Validez. La fuite est enregistrée et le \textbf{coût des pertes} est calculé automatiquement.
+\end{enumerate}
+
+% =====================================================================
+%  7. SUIVI ET ANALYSE
+% =====================================================================
+\section{Suivre et analyser}
+
+\begin{itemize}
+    \item \textbf{Suivi} : changez le statut d'une fuite (À réparer, En cours, Réparée, Annulée).
+    \item \textbf{Analyse IA} : lancez l'analyse d'une photo/vidéo pour détecter automatiquement la fuite.
+    \item \textbf{Rapports} : consultez les métriques et exportez les rapports en PDF.
+    \item \textbf{Dashboard web} : supervisez toutes les données depuis le navigateur.
+\end{itemize}
+
+% =====================================================================
+%  RÉCAPITULATIF
+% =====================================================================
+\section{Récapitulatif des étapes}
+
+\begin{table}[H]
+\centering
+\begin{tabular}{@{}ll@{}}
+\toprule
+\textbf{Étape} & \textbf{Action} \\
+\midrule
+1 & Scanner le QR code et installer l'application \\
+2 & Créer un compte \\
+3 & Créer un projet \\
+4 & Inviter des membres (ils doivent accepter) \\
+5 & Créer une campagne d'inspection \\
+6 & Signaler les fuites (GPS + photos) \\
+7 & Suivre et analyser (statuts, IA, rapports) \\
+\bottomrule
+\end{tabular}
+\caption{Les étapes clés pour démarrer}
+\end{table}
+
+\vspace{0.5cm}
+
+\begin{center}
+\rule{0.5\textwidth}{1pt}\\[0.3cm]
+{\small\textcolor{gris}{Pour toute question, contactez votre administrateur.}}
+\end{center}
+
+\end{document}

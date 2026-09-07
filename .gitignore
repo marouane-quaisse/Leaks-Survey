@@ -1,5 +1,16 @@
+# Fichiers et données sensibles / internes
 script.py
-backend/data/leaks_survey.mv.db
+backend/data/
 backend/uploads/
+backend/Fuites Media/
 PLAN_REACT_WEB.md
+RAPPORT_AVANCEMENT.md
+RAPPORT_METRIQUES.md
+DEPLOIEMENT.md
+123.txt
+site_code.txt
+debug_thumbs/
+Survey/
+*.class
 backend/src/main/java/com/backend/backend/service/tst.txt
+frontend/lib/api/Logique de CurrentProject.txt

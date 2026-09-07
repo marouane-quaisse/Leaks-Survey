@@ -10,6 +10,7 @@ services:
       - ./uploads:/app/uploads
       - ./backend/Fuites Media:/app/Fuites Media
     environment:
-      # Clé API Gemini injectée au runtime (secret GitHub ou fichier .env sur le VPS).
+      # Clés API injectées au runtime (secret GitHub ou fichier .env sur le VPS).
       - GEMINI_API_KEY=${GEMINI_API_KEY}
+      - JWT_SECRET=${JWT_SECRET}
     restart: always
